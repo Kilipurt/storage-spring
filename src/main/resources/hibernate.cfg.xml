@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hiberanate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@gromcode.c4qju9dqz8qa.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+        <property name="hibernate.connection.username">main</property>
+        <property name="hibernate.connection.password">2016UKRainian</property>
+        <property name="show_sql">true</property>
+        <mapping class="com.entity.File"/>
+        <mapping class="com.entity.Storage"/>
+    </session-factory>
+</hibernate-configuration>
