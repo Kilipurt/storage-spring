@@ -1,6 +1,6 @@
 package com;
 
-import com.controller.Controller;
+import com.controller.StorageController;
 import com.dao.FileDAO;
 import com.dao.StorageDAO;
 import com.entity.File;
@@ -17,18 +17,18 @@ public class Demo {
     private static FileService fileService = new FileService(fileDAO, operationsValidator);
     private static StorageService storageService = new StorageService(storageDAO, operationsValidator);
 
-    private static Controller controller = new Controller(fileService, storageService);
+    private static StorageController storageController = new StorageController(fileService, storageService);
 
     public static void main(String[] args) {
         File file1 = createFile("first", "txt", 25, null);
         File file2 = createFile("second", "mp4", 30, null);
         File file3 = createFile("first", "txt", 25, null);
-//        controller.saveFile(file2);
-//        controller.saveFile(file1);
+        storageController.saveFile(file2);
+//        storageController.saveFile(file1);
         Storage storage1 = createStorage(new String[]{"txt", "jpeg", "mp4"}, "Germany", 50);
         Storage storage2 = createStorage(new String[]{"txt", "jpeg", "xml"}, "Germany", 50);
-//        controller.saveStorage(storage2);
-//        controller.saveStorage(storage1);
+//        storageController.saveStorage(storage2);
+//        storageController.saveStorage(storage1);
 
         file1.setId(1);
         file2.setId(3);
@@ -37,19 +37,19 @@ public class Demo {
         storage2.setId(7);
 
         file2.setSize(2);
-//        controller.updateFile(file2);
+//        storageController.updateFile(file2);
 
 
         try {
-//            controller.put(storage1, file1);
-//            controller.put(storage1, file2);
-//            controller.put(storage2, file3);
+//            storageController.put(storage1, file1);
+//            storageController.put(storage1, file2);
+//            storageController.put(storage2, file3);
 
-//            controller.transferAll(storage2, storage1);
+//            storageController.transferAll(storage2, storage1);
 
-            controller.transferFile(storage1, storage2, 3);
+            storageController.transferFile(storage1, storage2, 3);
 
-//            controller.delete(storage2, file2);
+//            storageController.delete(storage2, file2);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -10,9 +10,9 @@
     <context:component-scan base-package="com"/>
 
     <bean id="hibernateUtil" class="com.util.HibernateUtil"/>
-    <bean id="fileDAO" class="com.dao.FileDAO"/>
-    <bean id="storageDAO" class="com.dao.StorageDAO"/>
-    <bean id="fileService" class="com.service.FileService"/>
-    <bean id="storageService" class="com.service.StorageService"/>
-    <bean id="operationsValidator" class="com.service.OperationsValidator"/>
+    <!--<bean id="fileDAO" class="com.dao.FileDAO"/>-->
+    <!--<bean id="storageDAO" class="com.dao.StorageDAO"/>-->
+    <!--<bean id="fileService" class="com.service.FileService"/>-->
+    <!--<bean id="storageService" class="com.service.StorageService"/>-->
+    <!--<bean id="operationsValidator" class="com.service.OperationsValidator"/>-->
 </beans>

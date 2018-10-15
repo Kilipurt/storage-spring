@@ -5,14 +5,16 @@ import com.entity.Storage;
 import com.service.FileService;
 import com.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-public class Controller {
+@Controller
+public class StorageController {
 
     private FileService fileService;
     private StorageService storageService;
 
     @Autowired
-    public Controller(FileService fileService, StorageService storageService) {
+    public StorageController(FileService fileService, StorageService storageService) {
         this.fileService = fileService;
         this.storageService = storageService;
     }

@@ -3,7 +3,9 @@ package com.dao;
 import com.entity.Storage;
 import com.util.HibernateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class StorageDAO extends GeneralDAO<Storage> {
 
     private static final String DELETE_REQUEST = "DELETE FROM STORAGE WHERE ID = :id";

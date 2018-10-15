@@ -5,9 +5,11 @@ import com.dao.StorageDAO;
 import com.entity.File;
 import com.entity.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class OperationsValidator {
     private StorageDAO storageDAO;
     private FileDAO fileDAO;
