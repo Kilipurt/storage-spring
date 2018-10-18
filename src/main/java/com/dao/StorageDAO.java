@@ -10,12 +10,9 @@ public class StorageDAO extends GeneralDAO<Storage> {
 
     private static final String DELETE_REQUEST = "DELETE FROM STORAGE WHERE ID = :id";
 
-    private HibernateUtil hibernateUtil;
-
     @Autowired
     public StorageDAO(HibernateUtil hibernateUtil) {
         setTypeOfClass(Storage.class);
-        setDeleteRequest(DELETE_REQUEST);
         setHibernateUtil(hibernateUtil);
     }
 
@@ -31,8 +28,8 @@ public class StorageDAO extends GeneralDAO<Storage> {
     }
 
     @Override
-    public void delete(long id) {
-        super.delete(id);
+    public void delete(long id, String deleteRequest) {
+        super.delete(id, DELETE_REQUEST);
     }
 
     @Override

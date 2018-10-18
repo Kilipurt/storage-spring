@@ -10,14 +10,9 @@ public abstract class GeneralDAO<T> {
 
     private Class typeOfClass;
     private HibernateUtil hibernateUtil;
-    private String deleteRequest;
 
     public void setTypeOfClass(Class typeOfClass) {
         this.typeOfClass = typeOfClass;
-    }
-
-    public void setDeleteRequest(String deleteRequest) {
-        this.deleteRequest = deleteRequest;
     }
 
     public void setHibernateUtil(HibernateUtil hibernateUtil) {
@@ -50,7 +45,7 @@ public abstract class GeneralDAO<T> {
         }
     }
 
-    public void delete(long id) {
+    public void delete(long id, String deleteRequest) {
         try (Session session = hibernateUtil.openSession()) {
             Transaction transaction = session.getTransaction();
             transaction.begin();

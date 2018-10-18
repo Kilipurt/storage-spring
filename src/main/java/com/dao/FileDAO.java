@@ -22,7 +22,6 @@ public class FileDAO extends GeneralDAO<File> {
     @Autowired
     public FileDAO(HibernateUtil hibernateUtil) {
         setTypeOfClass(File.class);
-        setDeleteRequest(DELETE_REQUEST);
         this.hibernateUtil = hibernateUtil;
         setHibernateUtil(hibernateUtil);
     }
@@ -38,9 +37,8 @@ public class FileDAO extends GeneralDAO<File> {
     }
 
     @Override
-    public void delete(long id) {
-
-        super.delete(id);
+    public void delete(long id, String deleteRequest) {
+        super.delete(id, DELETE_REQUEST);
     }
 
     @Override

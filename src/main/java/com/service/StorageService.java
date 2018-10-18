@@ -28,7 +28,7 @@ public class StorageService {
     }
 
     public void delete(long id) {
-        storageDAO.delete(id);
+        storageDAO.delete(id, null);
     }
 
     public Storage findById(long id) throws Exception {

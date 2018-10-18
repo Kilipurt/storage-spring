@@ -27,7 +27,7 @@ public class Demo {
 //        storageController.saveFile(file1);
         Storage storage1 = createStorage(new String[]{"txt", "jpeg", "mp4"}, "Germany", 50);
         Storage storage2 = createStorage(new String[]{"txt", "jpeg", "xml"}, "Germany", 50);
-//        storageController.saveStorage(storage2);
+        storageController.saveStorage(storage2);
 //        storageController.saveStorage(storage1);
 
         file1.setId(1);
@@ -47,7 +47,7 @@ public class Demo {
 
 //            storageController.transferAll(storage2, storage1);
 
-            storageController.transferFile(storage1, storage2, 3);
+//            storageController.transferFile(storage1, storage2, 3);
 
 //            storageController.delete(storage2, file2);
         } catch (Exception e) {

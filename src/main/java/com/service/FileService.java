@@ -30,7 +30,7 @@ public class FileService {
     }
 
     public void deleteFromDb(long id) {
-        fileDAO.delete(id);
+        fileDAO.delete(id, null);
     }
 
     public File findById(long id) throws Exception {
