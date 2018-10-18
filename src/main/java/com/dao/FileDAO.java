@@ -36,8 +36,7 @@ public class FileDAO extends GeneralDAO<File> {
         super.save(obj);
     }
 
-    @Override
-    public void delete(long id, String deleteRequest) {
+    public void delete(long id) {
         super.delete(id, DELETE_REQUEST);
     }
 
